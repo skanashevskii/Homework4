@@ -94,9 +94,9 @@ public class Main {
     public static void task7 () {
         System.out.println("Задача 7");
          // Пишем код для задачи 7
-        int one = 4;
-        int two =-5;
-        int three =6;
+        int one = 5;
+        int two = 7;
+        int three =5;
 
         if(one>two && one>three && one != two && one != three){
             System.out.println("one, больше two и three" );
@@ -107,9 +107,7 @@ public class Main {
         else if(one>two && one==three && one != two){
             System.out.println("one, больше two и равно three" );
         }
-        else if(one==two && one==three){
-            System.out.println("one, равно two и равно three" );
-        }
+
         else if (two>one && two>three && two!=one && two!=three) {
             System.out.println("two, больше one и three" );
         }
@@ -120,7 +118,7 @@ public class Main {
             System.out.println("two, больше one и равно three" );
         }
         else if (two==one && two==three) {
-            System.out.println("two, равно one и равно three" );
+            System.out.println("Все числа равны" );
         }
         else {
             System.out.println("three, больше two и one" );
