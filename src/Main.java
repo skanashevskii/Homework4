@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main  {
     public static void main(String[] args) {
         task1();
         task2();
@@ -12,8 +12,10 @@ public class Main {
         task2_1();
         task2_2();
         task2_3();
-        task2_4();
+        task2_4_1();
+        task2_4_2();
         task2_5();
+
 
     }
 
@@ -60,8 +62,10 @@ public class Main {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в школу");
         } else if (age >= 18 && age < 24) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в университет");
-        } else {
+        } else if(age>24){
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить на работу");
+        }else {
+            System.out.println("Если возраст человека равен " + age + ", то никуда ходить не надо :)");
         }
 
 
@@ -138,7 +142,7 @@ public class Main {
         System.out.println("Задача 2 часть 2");
         // Пишем код для задачи 2
         int clientOS = 1;
-        int clientDeviceYear = 2014;
+        int clientDeviceYear = 2015;
         if (clientOS == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         } else if (clientOS == 0 && clientDeviceYear >= 2015) {
@@ -156,16 +160,16 @@ public class Main {
         System.out.println("Задача 3 часть 2");
         // Пишем код для задачи 3
         int year = 2021;
-        if (year % 4 == 0 && year % 100 > 0) {
+        //if(year%4==0 && year%100!=0 || year%400==0){System.out.println("Високосный");} - вариант
+        if (year % 4 == 0 && year % 100 > 0 || year%400==0) {
             System.out.println(year + " г. високосный");
-        } else if (year % 100 == 0 && year % 400 == 0) {
-            System.out.println(year + " г. високосный");
+
         } else {
             System.out.println(year + " г. не високосный");
         }
     }
 
-    public static void task2_4() {
+    public static void task2_4_1() {
         System.out.println("Задача 4 часть 2");
         // Пишем код для задачи 4
         int deliveryDistance = 95;
@@ -179,6 +183,25 @@ public class Main {
         } else {
             System.out.println("Свыше 100 км доставки нет");
         }
+
+    }
+    //гибкий вариант
+    public static void task2_4_2() {
+        System.out.println("Задача 4 часть 2");
+        // Пишем код для задачи 4
+        int deliveryDistance = 95;
+        //т к меньше 1 дня нет доставки опускаем первое условие
+        int deliveryDays=1;
+        if(deliveryDistance>20){
+            deliveryDays++;
+
+        }
+        if(deliveryDistance>60){
+            deliveryDays++;
+
+        }
+
+        System.out.println("Потребуется на доставку дней: " +deliveryDays);
 
     }
 
